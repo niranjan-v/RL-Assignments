@@ -1,0 +1,5 @@
+https://arxiv.org/pdf/1102.2490v5.pdf -- kl-ucb
+MA214 course notes for bisection method used in kl-ucb
+numpy docs - generating random samples from uniform, beta distributions
+class notes - for algorithms
+

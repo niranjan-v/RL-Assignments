@@ -1,0 +1,8 @@
+pulp usage : 
+https://github.com/AnnaNican/optimizers/blob/master/GoingOnVacation.ipynb
+ (example from tutorial recommended https://www.youtube.com/watch?v=7yZ5xxdkTb8)
+https://pythonhosted.org/PuLP/pulp.html
+https://stackoverflow.com/questions/47728184/pulp-python-lp-wrong-solution
+https://stackoverflow.com/questions/44809519/pulp-how-to-specify-the-solvers-accuracy
+numpy docs
+Sutton and Barto for policy iteration algorithm, episodic vs continuous

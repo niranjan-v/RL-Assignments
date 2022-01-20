@@ -1,0 +1,14 @@
+approaches:
+===========
+evaluator.sh simply invokes the file evaluator.py
+function: evaluate(fpath)
+I used TD-𝝺 to estimate the value V. The  corresponds does this. I tuned alpha and lambda to minimise estimated error for given testcases. I also validated using few testcases from previous labs.
+I considered Monte Carlo and TD lambda methods. Since Monte Carlo methods can suffer from high variance, I prefered TD and tuned learning parameters to minimise the bias from initial values of these parameters.
+I used learning rate decay, multiplying it by a constant factor after every 650 updates while not allowing it to fall below a threshold. I also tried out another method[second reference] of weight decay, but the former method gave closer estimates.
+I also trained on the given sequence for some epochs. In the course of my experiments, I observed that, for MDPs with larger number of states this helped. I capped the number of epochs to 25 to limit the computation time.
+I also capped eligibility trace values to 1.0 
+
+
+I also implemented an empirical method for deterministic policies- evaluate_lin(fpath). I am not using this to estimate the V though.
+In this method, I estimated the transition probabilities, smoothed them, then formulated a set of linear equations and solved them to obtain V values. This method also gave reasonably close estimates. I didn't extend this to stochastic case though. 
+NOTE: THIS METHOD IS NOT BEING INVOKED.

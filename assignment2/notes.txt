@@ -1,0 +1,11 @@
+planner.py has all the code, it is invoked in plannes.sh by passing all the args as is
+
+episodic vs continuous: In continuous I am solving for S number of variables(the Value functions), in episodic
+V of last node is zero, so I am solving for S-1 number of variables
+
+when the pulp solver gives error, (in infeasible problems eg: mdp with no solutions), I am printing
+"problem is infeasible!" and exiting
+
+used the pulp solver itself for solving linear equations in policy evaluation step of policy iterartion
+
+mdp-family.txt: conitnuing mdp with 3 states and 2 actions

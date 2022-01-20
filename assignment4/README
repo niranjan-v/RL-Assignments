@@ -1,0 +1,28 @@
+script file: run.sh
+All the code is in the python file 'soure.py', 
+cmd to run : ./run.sh <optional args>
+required libraries : numpy, matplotlib
+
+the environment is same as that of eg 6.5 in Sutton & Barto
+	7*10 grid, start=(3,0) end=(3,7)
+
+the main function is 'sarsa'
+sarsa(nS,nA,num_eps=170,alpha=0.5,epsilon=0.1,p=1.)
+	nS is number of states, 70 here since 70 cells
+	nA is number of actions, 4 for basic moves, 8 if king moves are allowed
+	alpha - step size, I used alpha=0.5
+	epsilon - greediness parameter, I used epsilon=0.1
+	p=1.0 for deterministic case, p<1 for stochastic case
+		convention: let given wind strength be ws, in stochastic case,
+					wind strength = ws   prob=p
+								  = ws+1 prob=(1-p)/2
+								  = ws-1 prob=(1-p)/2
+
+sarsa return a dict which indicates number of steps taken for each episode.
+
+on running the code a dir by the name plots/ is created, it will have a total of 11 plots, one for each seed (seed_$i.png, i=0..9) and 
+one average plot (avg.png)
+
+optional args:
+	--stats 1  # to print stats of average number of steps for each experiment
+	--exp n # n=[3-6] number of experiments to run default 3

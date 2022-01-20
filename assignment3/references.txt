@@ -1,0 +1,4 @@
+Sutton Barto
+https://realworld-sdm.github.io/paper/19.pdf
+numpy docs
+class notes
